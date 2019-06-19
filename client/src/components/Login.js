@@ -13,7 +13,7 @@ class Login extends React.Component {
 
   handleChange = (e) => {
     const { name, value, } = e.target;
-    this.setState({ [name]: value, })
+    this.setState({ [name]: value, });
   }
 
   render() {
@@ -34,8 +34,8 @@ class Login extends React.Component {
           />
           <Form.Input 
             label="Password"
-            autoFocus
-            requiredname='password'
+            required
+            name='password'
             value={password}
             placeholder='Password'
             type='password'
@@ -54,7 +54,7 @@ export default class ConnectedLogin extends React.Component {
   render() {
     return(
       <AuthConsumer>
-        { auth => <Login {...this.UNSAFE_componentWillMount.props} auth={auth} />}
+        { auth => <Login {...this.props} auth={auth} />}
       </AuthConsumer>
     )
   }

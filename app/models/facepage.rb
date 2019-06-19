@@ -1,0 +1,2 @@
+class Facepage < ApplicationRecord
+end
