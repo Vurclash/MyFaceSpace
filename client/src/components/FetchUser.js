@@ -5,7 +5,7 @@ import { AuthConsumer, } from '../providers/AuthProvider';
 class FetchUser extends React.Component{
   state = { loaded: false, }
 
-  componentDidMount() {
+  componentDidMount(){
     const { auth: {authenticated, setUser, }, } = this.props;
 
     if (authenticated) {
@@ -34,7 +34,7 @@ class FetchUser extends React.Component{
   loaded = () => this.setState({ loaded: true, })
 
   render() {
-    return this.state.loaded ? this.props.children : null;
+    return this.state.loaded ? this.props.children : null ;
   };
 };
 
