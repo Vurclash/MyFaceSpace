@@ -6,7 +6,7 @@ class FetchUser extends React.Component{
   state = { loaded: false, }
 
   componentDidMount(){
-    const { auth: {authenticated, setUser, }, } = this.props;
+    const { auth: {authenticated, setUser, } } = this.props;
 
     if (authenticated) {
       this.loaded();
@@ -33,10 +33,10 @@ class FetchUser extends React.Component{
 
   loaded = () => this.setState({ loaded: true, })
 
-  render() {
-    return this.state.loaded ? this.props.children : null ;
-  };
-};
+    render() {
+    return this.state.loaded ? this.props.children : null
+  }
+}
 
 const ConnectedFetchUser = (props) => (
   <AuthConsumer>

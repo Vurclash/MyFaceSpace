@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :facepages, only: [:index, :update]
-    get "my_facepages", to: "facepages#my_facepages"
+    get "my_facepages", to: "facepages#facepages"
   end
 end
